@@ -4,9 +4,6 @@ set -oue pipefail
 # Find the exact kernel version inside the Bazzite image
 KVER=$(ls /usr/lib/modules | head -n 1)
 
-# Install the necessary build tools and kernel headers
-rpm-ostree install kernel-devel-$KVER gcc make git
-
 # Clone the Linuwu-Sense repository
 git clone https://github.com/0x7375646F/Linuwu-Sense.git /tmp/Linuwu-Sense
 cd /tmp/Linuwu-Sense
