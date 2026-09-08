@@ -13,8 +13,8 @@ jobs:
         uses: jasonn3/build-container-installer@main
         with:
           arch: x86_64
-          image_repo: ghcr.io/YOUR_GITHUB_NAME
-          image_name: YOUR_REPO_NAME
+          image_repo: ghcr.io/himansu-hansda
+          image_name: bazzite-predator
           image_tag: latest
           version: 44
           variant: Kinoite
