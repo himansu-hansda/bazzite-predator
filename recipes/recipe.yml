@@ -43,18 +43,17 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
   - type: rpm-ostree
-      install:
-        - gcc
-        - make
-        - git
-        - kernel-devel-matched
-        - elfutils-libelf-devel
-        - openssl-devel
-        - bison
-        - flex
-  
-    - type: script
-      scripts:
-        - build-linuwu.sh
+    install:
+      - gcc
+      - make
+      - git
+      - kernel-devel-matched
+      - elfutils-libelf-devel
+      - openssl-devel
+      - bison
+      - flex
+
+  - type: script
+    scripts:
+      - build-linuwu.sh
