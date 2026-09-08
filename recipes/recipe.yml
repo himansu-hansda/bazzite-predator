@@ -49,7 +49,7 @@ modules:
       - gcc
       - make
       - git
-      - kernel-devel
+      - kernel-devel-matched
 
   - type: script
     scripts:
