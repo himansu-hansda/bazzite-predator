@@ -53,6 +53,8 @@ modules:
       - openssl-devel
       - bison
       - flex
+      - clang
+      - lld
 
   - type: script
     scripts:
