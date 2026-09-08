@@ -1,0 +1,27 @@
+name: Build ISO
+on:
+  workflow_dispatch: # This adds the manual "Run workflow" button
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate ISO
+        uses: jasonn3/build-container-installer@main
+        with:
+          arch: x86_64
+          image_repo: ghcr.io/YOUR_GITHUB_NAME
+          image_name: YOUR_REPO_NAME
+          image_tag: latest
+          version: 44
+          variant: Kinoite
+          iso_name: bazzite-predator-custom.iso
+
+      - name: Upload ISO as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bazzite-predator-iso
+          path: ./*.iso
